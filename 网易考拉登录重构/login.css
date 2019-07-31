@@ -1,0 +1,365 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+header{
+	height: 101px;
+	width: 1351px;
+}
+header img{
+	position: absolute;
+	left: 175px;
+	top: 20px;
+	width: 210px;
+	height: 65px;
+}
+.doccenter{
+	background-color: #F8F8F8;
+	width: 1351px;
+	height: 600px;
+	display: block;
+	border: 1px solid #E8E8EA;
+}
+.centerdiv{
+	position: relative;
+	margin: 0 auto;
+	width: 1000px;
+	height: 600px;
+
+}
+.centerdiv img{
+	position: absolute;
+	top: 100px;
+	left: 10px;
+}
+.mainLoginsec{
+	position: absolute;
+	left: 600px;
+	top: 110px;
+}
+.phoneLogin{
+	color: #e31436;
+}
+.phoneLogin:hover{
+	cursor: pointer;
+}
+.emailLogin:hover{
+	cursor: pointer;
+}
+.seleLogin{
+	border: 1px solid #EAEAEA;
+	background-color: #F8F8F8;
+
+}
+.seleLogin div{
+
+	display: inline-block;
+	width: 175px;
+	height: 51px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: 700;
+	font-size: 15px;
+
+}
+.seleLogin span{
+	color: #DDDDDD;
+	display: inline-block;
+	font-size: 20px;
+}
+.allpwdlogindiv{
+	width: 360px;
+	height: 24px;
+	margin-top: 20px;
+}
+.allpwdlogindiv .allpwdlogin{
+	float: right;
+	margin-right: 40px;
+}
+.pwdlogin{
+	text-decoration: none;
+	color: #666;
+	/*background-size: cover;*/
+	background-image: url(img/6315f6c8-5227-4ca5-9e45-e21557db8eb5_84_125.png);
+
+	background-position: 0px 0px;
+	height: 15px;
+	width: 15px;
+	padding-left: 17px;
+	line-height: 18px;
+	font-size: 13px;
+
+}
+.allpwdlogin:after{
+	content: "使用密码验证登录";
+	/*margin-left: 20px;*/
+	color: #666;
+	font-size: 12px;
+}
+.mainlogin{
+	/*display: none;*/
+	width: 364px;
+	height: 275px;
+	background-color: white;
+	border: 1px solid #EAEAEA;
+}
+.mainemaillogin{
+	display: none;
+	width: 364px;
+	/*height: 275px;*/
+	background-color: white;
+	border: 1px solid #EAEAEA;
+}
+.inputPhone,.inputEmail{
+	width: 270px;
+	height: 36px;
+	background-color: white;
+	margin: 0 auto;
+	border: 1px solid #d5d5d5;
+	border-radius: 2px;
+}
+.phimg{
+	height: 18px;
+	width: 18px;
+	background-image: url(img/6315f6c8-5227-4ca5-9e45-e21557db8eb5_84_125.png);
+	background-position: -36px -34px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.emailimg{
+	height: 18px;
+	width: 18px;
+	background-image: url(img/6315f6c8-5227-4ca5-9e45-e21557db8eb5_84_125.png);
+	background-position: 0px -34px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.mainemaillogin>div{
+	margin-top: 20px;
+}
+.pwdemailimg{
+	height: 18px;
+	width: 18px;
+	background-image: url(img/6315f6c8-5227-4ca5-9e45-e21557db8eb5_84_125.png);
+	background-position: -66px -34px;
+	display: inline-block;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.inputPhone input{
+	width: 180px;
+	height: 30px;
+	border: none;
+	display: inline-block;
+	float: left;
+	margin-left: 40px;
+	margin-top: -29px;
+	line-height: 30px;
+	opacity: 0.5;
+}
+.inputEmail{
+	margin-top: 20px;
+}
+.inputEmail input{
+	width: 138px;
+	height: 30px;
+	border: none;
+	opacity: 0.5;
+	margin-left: 10px;
+}
+.inputEmail a{
+	text-decoration: none;
+	color: black;
+	width: 97px;
+	height: 34px;
+	border: 1px solid #D5D5D5;
+	background-color: #EEEEEE;
+	display: inline-block;
+	line-height: 34px;
+	text-align: center;
+	font-size: 15px;
+	float: right;
+	margin-top: -30px;
+}
+.btnlogin{
+	background-color: #E31436;
+	border: none;
+	margin-top: 20px;
+	margin-left: 45px;
+	width: 272px;
+	height: 36px;
+	color: white;
+	border-radius: 2px;
+}
+.neendt{
+	padding: 0 0 15px 0;
+	height: 28px;
+	width: 270px;
+	margin-left:45px;
+	margin-top: 10px;
+}
+#emailneendt{
+	padding: 0 0 15px 0;
+	height: 28px;
+	width: 270px;
+	margin-left:45px;
+	/*margin-top: -10px;*/
+}
+
+.neendtDiv label{
+	display: inline-block;
+	font-size: 12px;
+	color: #999;
+	line-height: 25px;
+	height: 25px;
+	float: left;
+	margin-top: -4px;
+	margin-left: 8px;
+
+}
+.neendtDiv span{
+	/*display: inline-block;*/
+	background-image: url(img/dagou.png);
+	background-position: -330px -92px;
+	height: 14px;
+	width: 14px;
+	border: 1px solid #AAAAAA;
+	float: left;
+
+}
+#emailneendt a{
+	text-decoration: none;
+	color: #999;
+	float: right;
+	font-size: 12px;
+}
+.neendt a{
+	text-decoration: none;
+	color: #999;
+	float: right;
+	font-size: 12px;
+}
+.loginyinsi{
+	color: #999;
+	font-size: 12px;
+	text-decoration: none;
+	margin-left: 45px;
+	margin-top: -10px;
+}
+#emailloginyinsi{
+	color: #999;
+	font-size: 12px;
+	text-decoration: none;
+	margin-left: 45px;
+	margin-top: -15px;
+	margin-bottom: 10px;
+}
+#emailloginyinsi a{
+		color: #999;
+}
+.loginyinsi a{
+	/*text-decoration: none;*/
+	color: #999;
+}
+.botLogin{
+	width: 364px;
+	height: 35px;
+	background-color: #F8F8F8;
+	border: 1px solid #ddd;
+	border-top: none;
+}
+.botul{
+	margin-left: 40px;
+	/*margin-top: 10px;*/
+	padding-top: 6px;
+	padding-bottom: 8px;
+}
+.botul li{
+	list-style: none;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	margin-left: 4px;
+}
+.botli1 a{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-image: url(img/icon1.png);
+	background-position: -760px -401px;
+	/*font-size: 22px;
+	line-height: 22px;*/
+}
+.botli2 a{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-image: url(img/icon1.png);
+	background-position: -792px -401px;
+}
+.botli3 a{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-image: url(img/icon1.png);
+	background-position: -824px -401px;
+}
+.botli4 a{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-image: url(img/icon1.png);
+	background-position: -856px -401px;
+}
+.botLogin > a{
+	color: #e31436;
+	float: right;
+	margin-top: -32px;
+	margin-right: 45px;
+	text-decoration: none;
+	font-size: 14px;
+}
+.botLogin span{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background-image: url(img/icon1.png);
+	 background-position: -899px -406px;
+	 float: right;
+	 margin-top: 5px;
+	 margin-left: 4px;
+
+}
+
+.fenjie{
+	margin: 0 20px;
+	color: black;
+}
+.botcontent a{
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+}
+.botcontent{
+	text-align: center;
+
+	/*margin-top: 30px;*/
+}
+footer{
+	margin-top: 40px;
+	margin-bottom: 100px;
+}
+.secspan,.secspan a{
+	margin: 0 20px;
+	color: #999;
+	line-height: 26px;
+	font-size: 12px;
+}
+
+.botcontent div{
+	margin-bottom: 10px;
+}
+
