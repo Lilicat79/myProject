@@ -1,0 +1,407 @@
+<style>
+	/*.topDiv{
+		margin: 20px;
+	}*/
+	.topDiv button{
+		margin: 10px;
+	}
+	.topDiv form{
+		margin: 10px;
+	}
+	#myTrash{
+		color: green;
+	}
+	#mypencil{
+		color: red;
+	}
+	.mySign{
+			color: red;
+			display: none;
+		}
+</style>
+<script>
+	$(function(){
+		var baseURL = '';
+			function getAjax(url,data,method,succFun,errorFun){
+				$.ajax({
+					url:baseURL + url,
+					data:data,
+					method:method,
+					success: succFun,
+		       		error:errorFun
+				})
+			}
+			//查询所有项目
+	
+		var $tabName = '';
+		var $reData = '';
+		findArticle({page:0,pageSize:100})
+		function findArticle(obj){
+
+			getAjax('http://134.175.154.93:8099/manager/article/findArticle',obj,'GET',function(res){
+				console.log('查询成功',res);
+				// var $opt = '';
+				var $wenzhang = '';
+				$(res.data.list).each(function(index,item){
+
+					if(item.category){
+						if(!item.author){
+							item.author = '-';
+						}
+
+							var $seleVal = $('#Consele option:selected').text()
+						
+							
+							
+							if($seleVal == item.category.name){
+				
+								$wenzhang += `
+								<tr>
+								<td>
+									<input type="checkbox" name="" value="`+item.id+`"s>
+								</td>
+								<td>`+item.title+`</td>
+								<td id='`+item.category.id+`'>`+item.category.name+`</td>
+								<td>`+item.liststyle+`</td>
+								<td>`+item.author+`</td>
+								<td>`+item.publishtime+`</td>
+								<td>`+item.readtimes+`</td>
+								<td>
+									<span class="glyphicon glyphicon-trash" id="myTrash" data_id ="`+item.id+`"></span>
+									<span class="glyphicon glyphicon-pencil" id="mypencil" data_id = "`+item.id+`" data_con = "`+item.content+`"></span>
+									</td>
+								</tr>`
+								$('tbody').html($wenzhang);
+				
+							}
+
+
+					}
+					
+					
+				})
+					
+
+
+
+				$('select').change(function(){
+					$wenzhang = '';
+					var $seleVal = $('#Consele option:selected').text();
+					var $seleId = $('#Consele option:selected').val();
+					// console.log($seleVal,$seleId);
+					$('tbody').html(null);
+					$(res.data.list).each(function(index,item){
+						if(item.category){						
+							if($seleVal == item.category.name&&$seleId==item.category.id){
+								// $('table').css('display','inline-block');
+									// console.log(item.category.name)
+								console.log($seleVal,$seleId);
+								$wenzhang += `
+								<tr>
+									<td>
+										<input type="checkbox" name="" value="`+item.id+`">
+									</td>
+									<td>`+item.title+`</td>
+									<td id= "`+item.category.id+`" class="`+item.id+`">`+item.category.name+`</td>
+									<td>`+item.liststyle+`</td>
+									<td>`+item.author+`</td>
+									<td>`+item.publishtime+`</td>
+									<td>`+item.readtimes+`</td>
+									<td>
+										<span class="glyphicon glyphicon-trash" id="myTrash" data_id ="`+item.id+`"></span>
+										<span class="glyphicon glyphicon-pencil" id="mypencil" data_id = "`+item.id+`" data_con = "`+item.content+`"></span>
+									</td>
+								</tr>`
+								$('tbody').html($wenzhang);
+						
+
+							}
+						
+						}
+					
+					})
+				})
+				
+			},function(error){
+				console.log('查询失败',error);
+			})
+		}
+
+		// $('select').change(function(){
+		// 	var $target = event.target;
+		// 	console.log($target)
+		// })
+
+
+
+		//sele接口
+			findAllCategory();
+			function findAllCategory(){
+			getAjax('http://134.175.154.93:8099/manager/category/findAllCategory',null,'GET',function(res){console.log('成功',res);
+				var $newTr = '';
+					$(res.data).each(function(index,item){					
+					var $sele = '';
+
+					 
+					
+					 	$sele +=`<option value ="`+item.id+`" class="`+item.id+`" >`+item.name+`</option>`
+					
+					
+					$('#Consele').append($sele);
+					$('#selelan').append($sele)
+					// item.parent.name = $seleValue;
+					$val = item.name;
+				});
+				},function(error){
+					console.log('失败',error);
+				});
+
+				
+			}
+			//新增 编辑
+			var title = '新增';
+
+			var currentId = '';
+			//删除 OK
+			$('#conTable').click(function(event){
+				var $target = $(event.target);
+				// console.log($target)
+				if($(event.target).attr('id') == 'myTrash'){
+					console.log($target)
+						var id = $(event.target).attr('data_id')
+						console.log(id);
+						deleteArticleById({id:id})
+								
+				}
+				//编辑
+				if($(event.target).attr('id') == 'mypencil'){
+					title='编辑';
+					console.log($target)
+					var $guaji = $target.parent().parent();
+					var $biantitle = $guaji.children().eq(1).text()//标题
+					var bianlan = $guaji.children().eq(2).attr('id');
+
+					var $bianstyle = $guaji.children().eq(3).text();
+					var $cont = $target.attr('data_con');
+					if($cont == null){
+						$('.modal-body textarea').val(" ");
+					}
+					else{
+						$('.modal-body textarea').val($cont);
+					}
+					// console.log( $cont)
+					// console.log()
+					$('#myModal').modal('show');
+					currentId = $target.attr('data_id');
+					// $conmiaoshu
+					// $("#selelan option[value=]").val($bianlan);
+					if(+bianlan){
+						$("#selelan option[value="+bianlan+"]").prop("selected",true);
+					}
+					
+	
+					$('.modal-body [type = text]').val($biantitle);//OK
+					$('.modal-body input[id = "'+$bianstyle+'"]').attr('checked','checked');
+					
+
+					
+				}
+				
+			})
+
+			$('#toAdd').click(function(){
+				title = '新增';
+				$('#myModal').modal('show');
+				 // $("#selelan option:selected").val();
+				$('.modal-body [type = text]').val(null);
+
+				$('.modal-body textarea').val(null);
+
+			})
+			//编辑或者添加接口
+			function saveOrUpdateArticle(obj){
+				getAjax('http://134.175.154.93:8099/manager/article/saveOrUpdateArticle',obj,'POST',function(res){
+					console.log('编辑或保存成功',res);
+					findArticle({page:0,pageSize:100});
+				},function(error){
+					console.log('编辑或保存失败',error);
+				})
+			}
+			//单个删除接口
+			function deleteArticleById(obj){
+				getAjax('http://134.175.154.93:8099/manager/article/deleteArticleById',obj,'GET',function(res){
+					console.log('删除成功',res);
+					findArticle({page:0,pageSize:100});
+					alert('删除成功');
+				},function(error){
+					console.log('删除失败',error);
+					alert('删除失败')
+				})
+			}
+			//批量删除 OK
+			$('#toDele').click(function(){
+				var $inputs = $('input');
+				var inputs = Array.prototype.slice.call($inputs,0);
+				var ids = inputs.filter(function(item){
+					return item.checked;
+				}).map(function(item){
+					return item.value;
+				});
+				console.log(ids);
+				batchDeleteArticle({ids:ids.join()})
+				
+			})
+			function batchDeleteArticle(obj){
+				getAjax('http://134.175.154.93:8099/manager/article/batchDeleteArticle',obj,'POST',function(res){
+					console.log('批量删除成功',res);
+					alert('删除成功');
+					findArticle({page:0,pageSize:100});
+				},function(error){
+					console.log('批量删除失败',error);
+					alert('删除失败')
+				})
+			}
+
+			//点击模态框保存 编辑或者增加
+			var $conmiaoshu = '';
+			$('#to-put').click(function(){
+
+				var $lanmuVal = $("#selelan option:selected").val();
+
+				var $biaoti = $('.modal-body [type = text]').val();//OK
+				var $seleId = $("#selelan option:selected").attr('class');
+				
+				var $style = $('.modal-body [type = radio]:checked').attr('id');
+				 $conmiaoshu = $('.modal-body textarea').val();
+				// console.log($seleId);
+				// 时间
+				function formatDate(){
+					var date = new Date();
+					var year = date.getFullYear();
+					var month = date.getMonth()+1;
+					var day = date.getDate();
+					month = month<10?'0'+month:month;
+					day = day<10?'0'+day:day;
+					var hours = date.getHours();
+					hours = hours<10?'0'+hours:hours;
+
+					var seconds = date.getSeconds();
+
+					sencods = seconds<10?'0'+seconds:seconds;
+
+					var minutes = date.getMinutes();
+
+					minutes = minutes<10?'0'+minutes:minutes;
+					return year + '-' +month+'-'+day+' '+hours+':'+minutes+':'+seconds;
+				}
+				var $publishtime = formatDate();
+				if($biaoti && $style && $conmiaoshu && $lanmuVal){
+					$('#myModal').modal('hide');
+					
+					if(title == '新增'){
+						var obj = {
+							title:$biaoti,
+							liststyle:$style,
+							categoryId:$seleId,
+							readtimes:0,
+							content:$conmiaoshu
+
+						}
+						saveOrUpdateArticle(obj)
+					}
+					if(title == '编辑'){
+						var obj = {
+							title:$biaoti,
+							liststyle:$style,
+							id:currentId,
+							categoryId:$seleId,
+							readtimes:0,
+							publishtime:$publishtime,
+							content:$conmiaoshu
+
+						}
+						saveOrUpdateArticle(obj);
+					}
+				}
+			}) 
+	})
+</script>
+<div>
+			<!-- 模态框 -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<!-- 	//头部 -->
+					<div class="modal-header">
+						<button class="btn btn-default close" data-dismiss="modal">&times;</button>
+						<span class="modal-title" id="modalTitle">模态框的标题</span>
+					</div>
+					<!-- //身体 -->
+					<div class="modal-body">
+						<form action="" class="form-horizontal"
+						>
+							<div class="form-group ">
+								<label for="" class="col-sm-2 control-label">标题</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="myInput">
+									</input>
+								</div>
+							</div>
+							<div class="form-group form-inline">
+								<label for="" class="col-sm-2 control-label lanmuParent">所属栏目</label>
+								<select name="" id="selelan" class="form-control">
+									
+
+								</select>
+							</div>
+							<div class="form-group ">
+								<label for="" class="col-sm-2 control-label">列表样式</label><br>
+
+								<input type="radio" name="changestyle" id="style-one"><label for="styleone"><img src="img/style-one.jpg" alt="" style="width: 200px;height: 100px;"></label>
+
+								<input type="radio" name="changestyle" id="style-two"><label for="styletwo"><img src="img/style-one.jpg" alt="" style="width: 200px;height: 100px;"></label>
+							</div>
+							<div class="form-group">
+								<label for=""  class="col-sm-2 control-label miaoshu">描述</label>
+								<textarea name="" id="" cols="20" rows="10" class="form-control" style="width: 300px;"></textarea>
+							</div>
+							
+						</form>
+
+					</div>
+					<!-- //脚部 -->
+						<div class="modal-footer">
+							<span class="mySign"><span class="glyphicon glyphicon-remove-sign"></span>请填写完整信息</span>
+							<button class="btn btn-primary" id="to-put">提交</button>
+						</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 模态框结束 -->
+	<div class="topDiv">
+		<button class="btn btn-primary" id="toAdd">新增</button>
+		<button class="btn btn-primary" id="toDele">批量删除</button>
+		<form action="" class="form-horizontal col-sm-4">
+		<select name="" id="Consele" class="form-control form-inline" >
+		</select>
+	</form>
+	<table class="table" id="conTable">
+		<thead>
+			<tr>
+				<th>编号</th>
+				<th>文章题目</th>
+				<th>所属栏目</th>
+				<th>排列方式</th>
+				<th>作者</th>
+				<th>发布时间</th>
+				<th>阅读次数</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>	
+	</div>
+</div>

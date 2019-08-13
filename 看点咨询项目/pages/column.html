@@ -1,0 +1,296 @@
+	<style>
+		.mySign{
+			color: red;
+			display: none;
+		}
+	</style>
+	<script>
+		$(function(){
+			var baseURL = '';
+			function getAjax(url,data,method,succFun,errorFun){
+				$.ajax({
+					url:baseURL + url,
+					data:data,
+					method:method,
+					success: succFun,
+		       		error:errorFun
+				})
+			}
+			//批量删除
+			// batchDeleteCategory();
+			$('.btn-div button').eq(1).click(function(){
+				var $inputs= $('input');
+				var inputs = Array.prototype.slice.call($inputs,0);
+				var ids = inputs.filter(function(item){
+					return item.checked;
+				}).map(function(item){
+					return item.value;
+				});
+
+				batchDeleteCategory({ids:ids.join()});
+				// console.log(ids.join());
+			})
+			// batchDeleteCategory({ids:6000});
+			function batchDeleteCategory(mes){
+				getAjax('http://134.175.154.93:8099/manager/category/batchDeleteCategory',mes,'POST',function(res){
+					console.log('批量删除成功',res);
+					findAllCategory();},function(error){
+					console.log('批量删除失败',error);
+				})
+			}
+
+			//查询所有
+			findAllCategory();
+
+			function findAllCategory(){
+				getAjax('http://134.175.154.93:8099/manager/category/findAllCategory',null,'GET',function(res){console.log('成功',res);
+					var $newTr = '';
+
+					$(res.data).each(function(index,item){
+					if(item.parent){
+						item.parent=item.parent;
+					}else{
+						item.parent={name:'-'};
+					}
+
+					var $opt = '';
+					 $opt +=`<option value="`+item.id+`">`+item.name+`</option>`
+					$('.plechange').after($opt);
+					// item.parent.name = $seleValue;
+					
+					 $newTr += `<tr>
+					<td><input type="checkbox" value="`+item.id+`"></input></td>
+					<td>`+item.name+`</td>
+					<td class="`+item.parent.id+`">`+item.parent.name+`</td>
+					<td>`+item.comment+`</td>
+					<td>
+						<span class="glyphicon glyphicon-trash" id="trash" data_id="`+item.id+`"></span>
+						<span class="glyphicon glyphicon-pencil" id="pencil" data_no="`+item.no+`" data_id="`+item.id+`" no="`+item.no+`"></span>
+					</td>
+				</tr>`;
+					$('tbody').html($newTr);
+				});
+				},function(error){
+					console.log('失败',error);
+				});
+
+				
+			}
+
+			//删除单个tr
+			// deleteCategoryById();
+			$('tbody').click(function(event){
+				// console.log($(event.target));
+				var $target = $(event.target);
+				// console.log($target);
+				// console.log($target.attr('id'));
+				// console.log($target.attr('data_id'))
+				if($target.attr('id') === 'trash'){
+					var id = $target.attr('data_id');
+					// console.log(id);
+					deleteCategoryById({id:id});
+					
+
+				}
+
+			})
+			function deleteCategoryById(obj){
+				getAjax('http://134.175.154.93:8099/manager/category/deleteCategoryById',obj,'GET',function(res){console.log('成功',res);findAllCategory()}),function(error){console.log(error)}
+			}
+
+			//增加数据
+			var currentId = '';
+			var titles = '新增';
+			// var values = '';
+			$('.btn-div button').eq(0).click(function(){
+				titles = '新增';
+				
+				//option的值
+				$('#myModal').modal('show');
+				$('.modal-body [type = text]').text(null);//OK
+				$('.modal-body textarea').val(null);//OK
+				$('#modalTitle').text('添加新栏目');
+				$("#seleParent option:selected").val('请选择');
+
+			});
+			//parent.name 父栏目内容
+		
+			$('#to-save').click(function(){
+				var $values = $("#seleParent option:selected").val();
+				console.log($values)
+				var $lanmu = $('.modal-body [type = text]').val();//OK
+				var $sePar = $('#seleParent option:selected').text();
+				// console.log($values);
+				// var $seleValue = $('#seleParent option:selected').val();//option的value值
+				// console.log($selePar)
+				// $('.parName').text($selePar)
+				// $('.parName').text($seleValue);
+				var $miaoshu = $('.modal-body textarea').val();//OK
+				//no是
+				if($lanmu && $sePar!='请选择'  &&  $miaoshu){
+						$('#myModal').modal('hide');
+						// console.log(titles);
+						//点击编辑按钮
+						if(titles=='编辑'){
+						// console.log(parId);
+						var rand = parseInt(Math.random()*100);
+						// parId = parseInt(parId);
+
+						saveOrUpdateCategory({id:currentId,name:$lanmu,comment:$miaoshu,no:rand,parentId:$values});
+						}
+						//新增完成
+						if(titles=='新增'){
+ 							console.log($values);
+							var rand = parseInt(Math.random()*100);
+							obj = {
+								name:$lanmu,comment:$miaoshu,no:rand,parentId:$values
+							}
+							saveOrUpdateCategory(obj);
+
+						}
+
+					}	
+					//点击增加按钮
+					
+				else{
+					$('.mySign').css('display','inline-block');
+				} 
+				
+			})
+			// saveOrUpdateCategory({name:'dog',comment:'dog',no:7979});
+			function saveOrUpdateCategory(addMes){
+				getAjax('http://134.175.154.93:8099/manager/category/saveOrUpdateCategory',addMes,'POST',function(res){
+					console.log('添加/修改成功',res);findAllCategory();
+					alert('成功')
+				},function(error){
+					console.log('添加/修改失败',error);
+					alert('失败')
+				})
+			}
+
+			//修改数据
+		
+		
+			$('tbody').click(function(event){
+				var $target = $(event.target);
+
+						
+				if($target.attr('id') === 'pencil'){
+					// console.log($target)	
+					
+
+
+					var $tds =  $target.parent().parent().children();
+					// console.log($tds);
+					var parId = $tds.eq(2).attr('class');
+					titles = '编辑';
+					var myName = $tds.eq(1).text();
+					var comment = $tds.eq(3).text();
+					console.log(myName,comment)
+					$('#modalTitle').text('修改栏目');
+					//模态框显示
+					$('#myModal').modal('show');					
+					$('#myInput').val(myName);
+					$('.modal-body textarea').val(comment);
+					console.log(parId)
+
+					if(+parId){
+						$("#seleParent option[value="+parId+"]").prop("selected",true);
+					}
+					else{
+						$('#seleParent option:selected').val('请选择');
+					}
+					
+		
+					var addId = $target.attr('data_id');
+					currentId = addId;
+					
+				}
+			})
+	
+			
+	})
+	</script>
+	<div>
+		<!-- 模态框 -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<!-- 	//头部 -->
+					<div class="modal-header">
+						<button class="btn btn-default close" data-dismiss="modal">&times;</button>
+						<span class="modal-title" id="modalTitle">模态框的标题</span>
+					</div>
+					<!-- //身体 -->
+					<div class="modal-body">
+						<form action="" class="form-horizontal"
+						>
+							<div class="form-group ">
+								<label for="" class="col-sm-2 control-label">栏目名称</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="myInput">
+									</input>
+								</div>
+							</div>
+							<div class="form-group form-inline">
+								<label for="" class="col-sm-2 control-label lanmuParent">父栏目</label>
+								<select name="" id="seleParent" class="form-control">
+									<option value="请选择" class="plechange">请选择</option>
+									
+									
+								</select>
+							</div>
+							<div class="form-group">
+								<label for=""  class="col-sm-2 control-label miaoshu">描述</label>
+								<textarea name="" id="" cols="20" rows="10" class="form-control" style="width: 300px;"></textarea>
+							</div>
+							
+						</form>
+
+					</div>
+					<!-- //脚部 -->
+						<div class="modal-footer">
+							<span class="mySign"><span class="glyphicon glyphicon-remove-sign"></span>请填写完整信息</span>
+							<button class="btn btn-primary" id="to-save">提交</button>
+						</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- 模态框结束 -->
+		<div class="btn-div">
+			<button type="button" class="btn btn-primary">
+		  	新增
+			</button>
+			<button type="button" class="btn btn-primary">
+			  批量删除
+			</button>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>名称</th>
+					<th>父栏目</th>
+					<th>描述</th>
+					<th>操作</th>
+				</tr>
+
+			</thead>
+			<tbody>
+
+				<!-- <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>
+						<span class="glyphicon glyphicon-trash" id="trash"></span>
+						<span class="glyphicon glyphicon-pencil" id="pencil"></span>
+					</td>
+				</tr> -->
+			</tbody>
+		</table>
+
+		
+	</div>
