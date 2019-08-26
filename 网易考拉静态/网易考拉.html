@@ -5,6 +5,8 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="网易考拉.css">
 	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="网易考拉.js"></script>
 </head>
 <body>
 	<div align="center" style="width: 1351px;" class="all">
@@ -24,6 +26,7 @@
 					<strong>下载APP</strong>
 					
 					<span>领1000元新人礼包</span>
+					
 			</div>
 		</div>
 		
@@ -241,10 +244,10 @@
 			<li>家具生活</li>
 			<li>数码家电</li>
 			<li>大牌轻奢</li>
-			<li class="specli2"><img src="image/上箭头.png" alt=""><br>TOP</li>
+			<li class="specli2" id="backTop"><img src="image/上箭头.png" alt=""><br>TOP</li>
 		</ul>
 		<div class="allgoods">
-			<div class="biaoti">
+			<div class="biaoti" id="chaozhi">
 				<span>超值爆款</span>
 			</div>
 			<ul class="firstgoods">
@@ -385,6 +388,1289 @@
 						</div>
 				</li>
 				</ul>
+			
+			<div class="biaoti" id="meirong">
+				<span>美容美妆</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+			
+
+			<div class="biaoti" id="muying">
+				<span>进口母婴</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+			
+
+			<div class="biaoti" id="huli">
+				<span>个人护理</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+			
+
+			<div class="biaoti" id="yingyang">
+				<span>营养保健</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+			
+
+			<div class="biaoti" id="gongchang">
+				<span>工厂店</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+				
+			<div class="biaoti" id="huanqiu">
+				<span>环球美食</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+				
+			<div class="biaoti" id="jiaju">
+				<span>家具生活</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+				
+			<div class="biaoti" id="shuma">
+				<span>数码家电</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+			
+			<div class="biaoti" id="dapai">
+				<span>大牌轻奢</span>
+			</div>
+			<ul class="firstgoods">
+				<li>
+				
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+					
+				</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/3件装.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>3件装【新人专享】Gerber嘉宝 大米米粉1段6个月227g</h5>
+						<h6>宝妈圈口碑相传的米粉</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/NARIS.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【修颜亮肤款】NARIS UP 娜丽丝亮白紫色防晒喷雾 80克</h5>
+						<h6>不惧骄阳 白皙依旧</h6>
+						<div class="goodsbot">
+						<span>¥29.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/v7.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Dr.Jart+ V7维他命控油亮白淡斑素颜霜 50毫升</h5>
+						<h6>一抹即白，懒人必备</h6>
+						<div class="goodsbot">
+						<span>¥129</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/弗里.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Freeplus 芙丽芳丝 净润洗面霜 100克 人见人爱</h5>
+						<h6>人见人爱，超高人气</h6>
+						<div class="goodsbot">
+						<span>¥89</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/无比滴.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>muhi 无比滴 儿童防蚊止痒液 驱蚊水 防蚊液 日本无比滴</h5>
+						<h6>日本进口无比滴</h6>
+						<div class="goodsbot">
+						<span>¥29</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/毛孔隐形.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【毛孔隐形】Dr.Jart+ 第三代经典银色BB霜 40毫升</h5>
+						<h6>防晒美肤一整天</h6>
+						<div class="goodsbot">
+						<span>¥99</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<div class="rexiao">热销</div>
+							<img src="image/美容美妆/活泉水.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>Avène 雅漾 舒护活泉水喷雾 150毫升</h5>
+						<h6>时刻补水 呵护一夏</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/美容美妆/益生菌.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【益生菌促消化易吸收】Gerber 嘉宝 婴幼儿辅食香蕉味益生菌燕麦粉2段6个月以上 227g/罐</h5>
+						<h6>益生菌促消化易吸收</h6>
+						<div class="goodsbot">
+						<span>¥9.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				<li>
+					<div class="goods"> 
+						<div class="goodsimg">
+							<img src="image/超值/亮白.webp" alt="">
+							<div class="newpeo">新人专享</div>
+						</div>
+						<h5>【亮白喷雾】Jmsolution 珍珠全身防水防晒隔离喷雾SPF50 180毫升</h5>
+						<h6>无惧夏日暴晒的秘密武器</h6>
+						<div class="goodsbot">
+						<span>¥49.90</span>
+						<img src="image/购物车2.png" alt="" class="divgouwu">
+						</div>
+				</li>
+				</ul>
+		
 			
 		</div>
 

@@ -683,11 +683,15 @@ header{
 }
 .fixnav{
 	position: fixed;
-	right: 50px;
+	margin-left: 20px;
+
+	z-index:999;
+
 	top: 200px;
 	background-color: #BE95F3;
 	list-style: none;
 	text-align: center;
+	display: none;
 	/*z-index: 0.4;*/
 }
 .fixnav li{
@@ -699,6 +703,9 @@ header{
 	font-size: 12px;
 	font-family: Helvetica;
 }
+.fixnav:hover{
+	cursor: pointer;
+}
 .fixnav .specli1{
 	height: 36px;
 	width: 100px;
@@ -709,7 +716,7 @@ header{
 	line-height: 10px;
 }
 .fixnav .specli3{
-	background-color: #8E70B6;
+	/*background-color: #8E70B6;*/
 }
 .specli1 img{
 	float: left;
