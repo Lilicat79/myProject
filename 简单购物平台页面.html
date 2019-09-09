@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+    	*{
+    		margin: 0;
+    		padding:0;
+    		font-size: 13px;
+    	}
+    	body,html{
+    		height: 100%;
+    	}
+    	.sc_body{
+			display: flex;
+			width: 1356px;
+			height: calc(100% + 150px);
+			margin: 0 auto;
+			/*margin-bottom: 50px;*/
+			/*margin: 0 auto;*/
+    	}
+    	.list-group{
+    		/*height: 400px;*/
+    		width: 300px;
+    		margin:10px;
+    	}
+		.left{
+			width: 300px;
+			height: 100%;
+			/*background-color: pink;*/
+		}
+		.right{
+			flex: 1;
+			height: 100%;
+			margin-bottom: 50px;
+			/*background-color: red*/
+		}
+		[class^=mulu]{
+			
+			border: 1px solid black;
+			overflow: hidden;
+
+		}
+		[class^=mulu] li{
+			text-align: center;
+			list-style: none;
+		}
+		[class^=mulu] li span{
+			float: left;
+		}
+		[class^=mulu] li button{
+			float: right;
+		}
+		header{
+			width: 100%;
+			height: 45px;
+			background-color: black;
+		}
+		header .form-control{
+			width: 160px;
+			height: 25px;
+			display: inline-block;
+		}
+		.head_left{
+			color: white;
+			line-height: 40px;
+
+		}
+		.head_right{
+			float: right;
+			color: white;
+			line-height: 40px;
+			margin-top: -38px
+		}
+		.head_right span{
+			display: inline-block;
+			width: 50px;
+			text-align: center;
+		}
+		.breadcrumb{
+			margin: 15px 35px;
+
+		}
+		footer{
+			width: 100%;
+			height: 40px;
+			position: fixed;
+			background-color: black;
+			bottom: 0;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+		}
+		.right{
+			margin-bottom: 150px;
+
+		}
+		.right div{
+			border:1px solid #ccc;
+			width: 220px;
+			display: inline-block;
+			margin:0 60px;
+			text-align: center;
+		}
+		.right img{
+			margin: 5px auto;
+		}
+		.right span{
+			display: block;
+			margin: 10px 5px;
+			white-space:normal;
+			/*width: 180px;*/
+		}
+		.right button{
+			margin-bottom: 10px;
+		}
+		.phone{
+			color: #497AA7;
+			font-size: 20px;
+			font-weight: 700
+		}
+		.price{
+			color: red;
+			font-size: 17px;
+			font-weight: 700;
+		}
+		.banben{
+			color: #497AA7;
+		}
+    </style>
+  </head>
+  <body>
+  	<header>
+  		<div class="head_left">
+  			<span>电子商店</span>
+  		</div>
+  		<div class="head_right">
+  			<input type="email" class="form-control" placeholder="请输入商品名称...">
+	  		<button class="btn btn-primary">搜索</button>
+	  		<span>商品</span>
+	  		<span>注册</span>
+	  		<span>登录</span>
+  		</div>
+  		
+  		
+  	</header>
+    <div class="sc_body">
+      <div class="left">
+		 <div class="list-group">
+		  <a href="#" class="list-group-item active">
+		    电子产品
+		  </a>
+		  <a href="#" class="list-group-item">手机 <button class="btn btn-primary" style="float: right;line-height: 10px" >234</button></a>
+		  <a href="#" class="list-group-item">笔记本 <button class="btn btn-success" style="float: right;line-height: 10px" >34</button></a>
+		  <a href="#" class="list-group-item">平板 <button class="btn btn-danger" style="float: right;line-height: 10px" >4</button></a>
+		  <a href="#" class="list-group-item">显示器 <button class="btn btn-info" style="float: right;line-height: 10px" >434</button></a>
+		  <a href="#" class="list-group-item">游戏机 <button class="btn btn-success" style="float: right;line-height: 10px" >34</button></a>
+		</div>
+		<div class="list-group">
+		  <a href="#" class="list-group-item list-group-item-success">
+		    智能数码
+		  </a>
+		  <a href="#" class="list-group-item">手环 <button class="btn btn-danger" style="float: right;line-height: 10px" >300</button></a>
+		  <a href="#" class="list-group-item">手表 <button class="btn btn-success" style="float: right;line-height: 10px" >340</button></a>
+		  <a href="#" class="list-group-item">VR眼镜 <button class="btn btn-info" style="float: right;line-height: 10px" >735</button></a>
+		  
+		</div>
+		<div class="list-group">
+		  <a href="#" class="list-group-item active">
+		    手机配件
+		  </a>
+		  <a href="#" class="list-group-item">手机配件 <button class="btn btn-warning" style="float: right;line-height: 10px" >456</button></a>
+		  <a href="#" class="list-group-item">耳机 <button class="btn btn-success" style="float: right;line-height: 10px" >156</button></a>
+		  <a href="#" class="list-group-item">移动电源 <button class="btn btn-info" style="float: right;line-height: 10px" >400</button></a>
+		  <a href="#" class="list-group-item">手机壳 <button class="btn btn-primary" style="float: right;line-height: 10px" >89</button></a>
+		  <a href="#" class="list-group-item">手机支架 <button class="btn btn-primary" style="float: right;line-height: 10px" >90</button></a>
+		  <a href="#" class="list-group-item">手机贴膜 <button class="btn btn-warning" style="float: right;line-height: 10px" >567</button></a>
+		</div>
+       
+      </div>
+      	
+      <div class="right">
+
+        <ol class="breadcrumb">
+		  <li><a href="#">首页</a></li>
+		  <li class="active">手机</li>
+		</ol>
+        	<div>
+        		<img src="https://cdn.itbegin.com//pics/admin/2017/6/636f83f02480403e94ab28376ca135f7.jpg" alt="">
+        		<span class="phone">OPPO</span>
+        		<span class="price">1599</span>
+        		<span class="banben">OPPO A57 3GB+32GBn内存版</span>
+        		<span class="shuangka">黑色 全网通4G手机 双卡双待</span>
+        		<button class="btn btn-success">立即购买</button>
+        	</div>
+        	<div>
+        		<img src="https://cdn.itbegin.com//pics/admin/2017/6/636f83f02480403e94ab28376ca135f7.jpg" alt="">
+        		<span class="phone">荣耀</span>
+        		<span class="price">1598</span>
+        		<span class="banben">荣耀8 3GB+32GB</span>
+        		<span class="shuangka">全网通版 珠光白</span>
+        		<button class="btn btn-success">立即购买</button>
+        	</div>
+        	<div>
+        		<img src="https://cdn.itbegin.com//pics/admin/2017/6/636f83f02480403e94ab28376ca135f7.jpg" alt="">
+        		<span class="phone">iPhone 7</span>
+        		<span class="price">6388</span>
+        		<span class="banben">Apple iPhone 7Plus(A1661)128G</span>
+        		<span class="shuangka">黑色 全网通4G手机 双卡双待</span>
+        		<button class="btn btn-success">立即购买</button>
+        	</div>
+       
+        <ol class="breadcrumb">
+		  <li><a href="#">首页</a></li>
+		  <li class="active">笔记本</li>
+		</ol>
+        	<div>
+        		<img src="https://cdn.itbegin.com//pics/admin/2017/6/636f83f02480403e94ab28376ca135f7.jpg" alt="">
+        		<span class="phone">MacBook Air</span>
+        		<span class="price">5988</span>
+        		<span class="banben">Apple MacBook Air 13.3英寸笔记本电脑</span>
+        		<span class="shuangka">英寸笔记本</span>
+        		<button class="btn btn-success">立即购买</button>
+        	</div>
+        	<div>
+        		<img src="https://cdn.itbegin.com//pics/admin/2017/6/636f83f02480403e94ab28376ca135f7.jpg" alt="">
+        		<span class="phone">戴尔DELL灵越</span>
+        		<span class="price">4199</span>
+        		<span class="banben">戴尔DELL灵越5565-R2945A 15.6英寸笔记本电脑</span>
+        		<span class="shuangka">灰四核处理器 8G大内存 256SSD</span>
+        		<button class="btn btn-success">立即购买</button>
+        	</div>
+        	<div>
+        		<img src="https://cdn.itbegin.com//pics/admin/2017/6/636f83f02480403e94ab28376ca135f7.jpg" alt="">
+        		<span class="phone">联想(Lenovo)拯救者</span>
+        		<span class="price">6599</span>
+        		<span class="banben">连续(Lenovo)拯救者</span>
+        		<span class="shuangka">R720 15.6英寸游戏</span>
+        		<button class="btn btn-success">立即购买</button>
+        	</div>
+        
+      </div>
+
+    </div>
+    <footer>
+    	&copy;2017|Email:info@itbegin.com
+    </footer>
+  </body>
+</html>
